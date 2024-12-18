@@ -16,18 +16,21 @@ def on_click(x, y, button, pressed):
         return False
     
 def main():
-    print("Script running, click once to select auto-click subject")
+    print(f"\nScript running, click once to select auto-click subject")
     
-    # Establish Listener
+    # Establish Listener for click location input
     with Listener(on_click=on_click) as listener:
         listener.join()
     
     # Take user input for number of clicks and the interval between clicks
-    amount_of_clicks = int(input("Enter desired amount of clicks to perform: "))
+    amount_of_clicks = int(input("\nEnter desired amount of clicks to perform: "))
     seconds_interval = float(input("Enter interval between clicks (seconds): "))
     
     # Execute click operation
     pyautogui.click(2000, 1300, clicks=amount_of_clicks, interval=seconds_interval, button='left')
 
+    # Scrit formatting
+    print("\n")
+    
 if __name__ == "__main__":
     main()

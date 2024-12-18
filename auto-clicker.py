@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
+import pyautogui
 
 def main():
     print("Script running correctly")
-    # Your code goes hereff
+
+    print(pyautogui.size())
 
 if __name__ == "__main__":
     main()
